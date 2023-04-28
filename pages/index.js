@@ -17,12 +17,12 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.description}>
           <p>
-            Collaborators get started by Login <a href='#'>Login</a>&nbsp;
-            <code className={styles.code}>pages/index.js</code>
+            Members <a href='#'>Login</a>&nbsp;
           </p>
           <div>
               <Image
                 alt="SXDC Logo"
+                src="/favicon.ico"
                 className={styles.vercelLogo}
                 width={100}
                 height={24}
@@ -35,8 +35,8 @@ export default function Home() {
             className={styles.logo}
             src="/med-redBand.jpeg"
             alt="Red Band"
-            width={180}
-            height={37}
+            width={720}
+            height={145}
             priority
           />
         </div>
@@ -95,7 +95,7 @@ export default function Home() {
               Join Us <span>-&gt;</span>
             </h2>
             <p className={inter.className}>
-              Regiester with us to be part of this mission and be a civle vigilannte &nbsp;.
+              Register with us to be part of this mission and be a Civil vigilante &nbsp;.
             </p>
           </a>
         </div>
