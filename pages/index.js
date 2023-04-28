@@ -17,7 +17,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.description}>
           <p>
-            Collaborators get started by Login <a href='#'>Login</>&nbsp;
+            Collaborators get started by Login <a href='#'>Login</a>&nbsp;
             <code className={styles.code}>pages/index.js</code>
           </p>
           <div>
@@ -66,7 +66,8 @@ export default function Home() {
               Learn the Medicine Supply Chain <span>-&gt;</span>
             </h2>
             <p className={inter.className}>
-              Learn how drug reached your home from a factory and where are loop holes reported &nbsp;!
+             <li> Learn how drugs reach your home from a factory.</li> 
+             <li> What are loop holes reported on schedule-x  &nbsp;!</li>
             </p>
           </a>
 
