@@ -9,7 +9,7 @@ const HomePage = () => {
   const router = useRouter();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const { myParam } = router.query;
+  const { ref } = router.query;
 
   
 
@@ -23,7 +23,7 @@ const HomePage = () => {
 
       <main className={styles.main}>
           <div className="styles.description">
-             <p>Welcome ... {myParam} </p>  
+             <p>Welcome ... {ref} </p>  
           </div>
             <div className={styles.center}>
            Welcome to Home page 
