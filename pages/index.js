@@ -19,7 +19,9 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.description}>
           <p>
-            Members <Link to="/login">Login</Link>&nbsp;
+            Members <Link href="/login">
+              <a>Login</a>
+              </Link>&nbsp;
             
           </p>
           <div>

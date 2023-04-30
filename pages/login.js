@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
+
 
 const LoginPage = () => {
   const router = useRouter();
@@ -10,7 +12,7 @@ const LoginPage = () => {
     event.preventDefault();
     // Do your login logic here, such as making an API call to authenticate the user
     // If login is successful, redirect to home page
-    router.push("/");
+    router.push("#");
   };
 
   return (
