@@ -19,10 +19,15 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.description}>
           <p>
-            Members <Link href="/login">
+            Distributer <Link href="/login?ref=distributer">
               <a>Login</a>
               </Link>&nbsp;
             
+          </p>
+          <p>
+            Retailer <Link href="/login?ref=retailer">
+              <a>Login</a>
+              </Link>&nbsp; 
           </p>
           <div>
               <Image
