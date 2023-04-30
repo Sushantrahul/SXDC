@@ -26,7 +26,7 @@ const LoginPage = () => {
 
       <main className={styles.main}>
           <div className="styles.description">
-             <p>Welcome ... {myParam} !</p>  
+             <p>Welcome ... {myParam} </p>  
           </div>
             <div className={styles.center}>
                 <form onSubmit={handleLogin}>
