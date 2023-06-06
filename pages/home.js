@@ -26,7 +26,12 @@ const HomePage = () => {
              <p>Welcome ... {ref} </p>  
           </div>
             <div className={styles.center}>
-           Welcome to Home page 
+              <p><input type='button' value="Upload Monthly Returns" style="height:5em; width:50em"/></p>
+              <p>Upload your Monthly returns</p>
+            </div>
+            <div className={styles.center}>
+              <p>Upload your Monthly returns</p>
+              <p><input type='button' value="Upload Monthly Returns" style="height:5em; width:50em"/></p>
             </div>
         </main>
   

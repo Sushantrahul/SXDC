@@ -17,20 +17,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.description}>
+        <div className={styles.grid}>
           <p>
-            Distributer <Link href="/login?ref=distributer">
-              <a>Login</a>
-              </Link>&nbsp;
-            
-          </p>
-          <p>
-            Retailer <Link href="/login?ref=retailer">
-              <a>Login</a>
-              </Link>&nbsp; 
-          </p>
-          <div>
-              <Image
+          <Image
                 alt="SXDC Logo"
                 src="/favicon.ico"
                 className={styles.vercelLogo}
@@ -38,6 +27,14 @@ export default function Home() {
                 height={24}
                 priority
               />
+          </p>
+          <p>
+            <Link href="/login?ref=retailer">
+              <a>Login</a>
+            </Link>&nbsp; 
+          </p>
+          <div>
+             
           </div>
         </div>
         <div className={styles.center}>
@@ -88,7 +85,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
+              Operational Model <span>-&gt;</span>
             </h2>
             <p className={inter.className}>
               Discover how this application can help the youth and help Govt agencies to gather data for various&nbsp;projects.
