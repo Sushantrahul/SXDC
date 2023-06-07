@@ -9,13 +9,14 @@ const LoginPage = () => {
   const router = useRouter();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const { ref } = router.query;
+  //const { ref } = router.query;
 
   const handleLogin = async (event) => {
     event.preventDefault();
     // Do your login logic here, such as making an API call to authenticate the user
     // If login is successful, redirect to home page
-    router.push("/home");
+    //router.push("/home");
+    //onSubmit={handleLogin}
   };
 
   return (<>
@@ -28,10 +29,10 @@ const LoginPage = () => {
 
       <main className={styles.main}>
           <div className="styles.description">
-             <p>Welcome ... {ref} </p>  
+             <p>Welcome</p>  
           </div>
             <div className={styles.center}>
-                <form onSubmit={handleLogin}>
+                <form >
                 <label>
                 Username:
                 <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />

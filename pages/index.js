@@ -29,7 +29,7 @@ export default function Home() {
               />
           </p>
           <p>
-            <Link href="/login?ref=retailer">
+            <Link href="/login">
               <a>Login</a>
             </Link>&nbsp; 
           </p>
