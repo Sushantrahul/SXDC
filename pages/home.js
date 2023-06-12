@@ -41,7 +41,7 @@ const HomePage = () => {
   return (<>
     <main className={styles.main}>
       <p>File Upload</p>
-      <div className="{styles.description}">
+      <div className={styles.card}>
           <form onSubmit={handleFormSubmit}>
           <input type="file" onChange={handleFileChange} />
           <button type="submit">Upload</button>
@@ -49,7 +49,7 @@ const HomePage = () => {
       </div>
 
       <p>Inline data upload</p>
-      <div className="{styles.description}">
+      <div className={styles.span}>
       <form onSubmit={handleSubmit}>
         {rows.map((row) => (
           <div key={row.id}>
