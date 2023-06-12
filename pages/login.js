@@ -15,10 +15,12 @@ const LoginPage = () => {
     event.preventDefault();
     // Do your login logic here, such as making an API call to authenticate the user
     // If login is successful, redirect to home page
-    //router.push("/home");
+    router.push("/home");
     onSubmit={handleLogin}
   };
+  
 
+    
   return (<>
     <Head>
         <title>SXDC</title>
@@ -28,10 +30,8 @@ const LoginPage = () => {
     </Head>
 
       <main className={styles.main}>
-          <div className="styles.description">
-             <p>Welcome</p>  
-          </div>
-            <div className={styles.center}>
+       
+          <div className={styles.center}>
                 <form >
                 <label>
                 Username:
@@ -43,8 +43,12 @@ const LoginPage = () => {
                 </label>
                 <button type="submit">Login</button>
                 </form>    
-            </div>
-        </main>
+          </div>
+           
+      
+        
+            
+      </main>
   
   
   
