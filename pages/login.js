@@ -16,7 +16,7 @@ const LoginPage = () => {
     // Do your login logic here, such as making an API call to authenticate the user
     // If login is successful, redirect to home page
     //router.push("/home");
-    //onSubmit={handleLogin}
+    onSubmit={handleLogin}
   };
 
   return (<>

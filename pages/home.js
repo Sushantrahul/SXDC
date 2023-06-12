@@ -1,27 +1,30 @@
 import { useRouter } from "next/router";
+import { useState } from 'react';
 import styles from '@/styles/Home.module.css'
 
 
 const HomePage = () => {
-  //const router = useRouter();
-  //const [username, setUsername] = useState("");
-  //const [password, setPassword] = useState("");
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    // Perform file upload logic here, such as sending the file to a server
+    console.log(selectedFile);
+  };
   
   return (<>
-      <main className={styles.main}>
-        <form>
-            <div className={styles.center}>
-            <p>Upload your Monthly returns</p>
-              <p><input type='button' value="Upload Monthly Returns" /></p>
-              <p><input type='submit' /></p>              
-            </div>
-            <div className={styles.center}>
-              <p>Add single return : </p>
-              <p><input type='button' value="Upload Monthly Returns" /></p>
-            </div>
-        </form>    
-      </main>
+       <div>
+      <h2>File Upload</h2>
+      <form onSubmit={handleFormSubmit}>
+        <input type="file" onChange={handleFileChange} />
+        <button type="submit">Upload</button>
+      </form>
+    </div>
   </>);
-};
+}
 
 export default HomePage;
