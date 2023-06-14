@@ -52,6 +52,7 @@ const HomePage = () => {
      
       <div className={styles.card}>
       <h2>Inline data upload</h2>  
+      </div>
       <form onSubmit={handleSubmit}>
       <div className={styles.grid}>
       <input type="text" name="Sr#"  placeholder="sr" onChange={(event) => handleInputChange(row.id, event)}/>
@@ -75,7 +76,7 @@ const HomePage = () => {
             <input type="text" name="MRP"  placeholder="mrp" onChange={(event) => handleInputChange(row.id, event)}/>
             <input type="text" name="Packaging"  placeholder="pkg" onChange={(event) => handleInputChange(row.id, event)}/>
             <input type="text" name="Quantity"  placeholder="qnt" onChange={(event) => handleInputChange(row.id, event)}/>
-            
+
             <button type="button" onClick={() => removeRow(row.id)}>
               Remove
             </button>
@@ -86,7 +87,7 @@ const HomePage = () => {
         </button>
         <button type="submit">Submit</button>
       </form>
-    </div>
+    
     </main>
   </>);
 }
