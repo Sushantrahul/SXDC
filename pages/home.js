@@ -8,7 +8,7 @@ const HomePage = () => {
   const [rows, setRows] = useState([]);
   const [file, setFile] = useState();
 
-  const handleSubmit = (e) => {
+  const handleSubmitfile = (e) => {
     e.preventDefault();
 
     const formData = new FormData();
@@ -21,7 +21,7 @@ const HomePage = () => {
       .then(response => response.json())
       .then(data => setFile(data.file));
 
-  
+  };
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
   };
@@ -58,7 +58,7 @@ const HomePage = () => {
      
       <div className={styles.card}> 
          <h2>File Upload</h2>
-          <form onSubmit={handleFormSubmit}>
+          <form onSubmit={handleSubmitfile}>
           <input type="file" onChange={handleFileChange} />
           <button type="submit">Upload</button>
           </form>
