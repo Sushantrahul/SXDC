@@ -6,7 +6,22 @@ import styles from '@/styles/Home.module.css'
 const HomePage = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [rows, setRows] = useState([]);
+  const [file, setFile] = useState();
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append('file', file);
+
+    fetch('/upload', {
+      method: 'POST',
+      body: formData,
+    })
+      .then(response => response.json())
+      .then(data => setFile(data.file));
+
+  
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
   };
@@ -47,6 +62,9 @@ const HomePage = () => {
           <input type="file" onChange={handleFileChange} />
           <button type="submit">Upload</button>
           </form>
+          {file && (
+        <img src={file.url} alt="File content" />
+      )}
       </div>
 
      
