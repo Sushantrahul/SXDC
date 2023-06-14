@@ -40,21 +40,42 @@ const HomePage = () => {
   
   return (<>
     <main className={styles.main}>
-      <p>File Upload</p>
-      <div className={styles.card}>
+     
+      <div className={styles.card}> 
+         <h2>File Upload</h2>
           <form onSubmit={handleFormSubmit}>
           <input type="file" onChange={handleFileChange} />
           <button type="submit">Upload</button>
           </form>
       </div>
 
-      <p>Inline data upload</p>
-      <div className={styles.span}>
+     
+      <div className={styles.card}>
+      <h2>Inline data upload</h2>  
       <form onSubmit={handleSubmit}>
+      <div className={styles.grid}>
+      <input type="text" name="Sr#"  placeholder="sr" onChange={(event) => handleInputChange(row.id, event)}/>
+            <input type="text" name="Salt Name"  placeholder="salt" onChange={(event) => handleInputChange(row.id, event)}/>
+            <input type="text" name="Brand"  placeholder="brand" onChange={(event) => handleInputChange(row.id, event)}/>
+            <input type="text" name="Manifacturer"  placeholder="manifacturer" onChange={(event) => handleInputChange(row.id, event)}/>
+            <input type="text" name="Manifacturer Date"  placeholder="mani_date" onChange={(event) => handleInputChange(row.id, event)}/>
+            <input type="text" name="Expiry Date"  placeholder="exp_date" onChange={(event) => handleInputChange(row.id, event)}/>
+            <input type="text" name="MRP"  placeholder="mrp" onChange={(event) => handleInputChange(row.id, event)}/>
+            <input type="text" name="Packaging"  placeholder="pkg" onChange={(event) => handleInputChange(row.id, event)}/>
+            <input type="text" name="Quantity"  placeholder="qnt" onChange={(event) => handleInputChange(row.id, event)}/>
+      </div>
         {rows.map((row) => (
-          <div key={row.id}>
-            <input type="text" name="name"  placeholder="Name" onChange={(event) => handleInputChange(row.id, event)}/>
-            <input type="text" name="email"  placeholder="email" onChange={(event) => handleInputChange(row.id, event)}/>
+          <div className={styles.grid} key={row.id}>
+            <input type="text" name="Sr#"  placeholder="sr" onChange={(event) => handleInputChange(row.id, event)}/>
+            <input type="text" name="Salt Name"  placeholder="salt" onChange={(event) => handleInputChange(row.id, event)}/>
+            <input type="text" name="Brand"  placeholder="brand" onChange={(event) => handleInputChange(row.id, event)}/>
+            <input type="text" name="Manifacturer"  placeholder="manifacturer" onChange={(event) => handleInputChange(row.id, event)}/>
+            <input type="text" name="Manifacturer Date"  placeholder="mani_date" onChange={(event) => handleInputChange(row.id, event)}/>
+            <input type="text" name="Expiry Date"  placeholder="exp_date" onChange={(event) => handleInputChange(row.id, event)}/>
+            <input type="text" name="MRP"  placeholder="mrp" onChange={(event) => handleInputChange(row.id, event)}/>
+            <input type="text" name="Packaging"  placeholder="pkg" onChange={(event) => handleInputChange(row.id, event)}/>
+            <input type="text" name="Quantity"  placeholder="qnt" onChange={(event) => handleInputChange(row.id, event)}/>
+            
             <button type="button" onClick={() => removeRow(row.id)}>
               Remove
             </button>
