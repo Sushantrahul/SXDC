@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
+import Image from 'next/image'
 
 
 const HomePage = () => {
@@ -56,21 +57,21 @@ const HomePage = () => {
   return (<>
     <main className={styles.main}>
      
-      <div className={styles.card}> 
-         <h2>File Upload</h2>
+          <span className={styles.card}>
+              <h2>File Upload</h2>
+          </span>          
           <form onSubmit={handleSubmitfile}>
           <input type="file" onChange={handleFileChange} />
           <button type="submit">Upload</button>
           </form>
           {file && (
-        <img src={file.url} alt="File content" />
+        <Image src={file.url} alt="File content" />
       )}
-      </div>
 
      
-      <div className={styles.card}>
+      <span className={styles.card}>
       <h2>Inline data upload</h2>  
-      </div>
+      </span>
       <form onSubmit={handleSubmit}>
       <div className={styles.grid}>
       <input type="text" name="Sr#"  placeholder="sr" onChange={(event) => handleInputChange(row.id, event)}/>

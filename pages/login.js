@@ -15,7 +15,7 @@ const LoginPage = () => {
     event.preventDefault();
     // Do your login logic here, such as making an API call to authenticate the user
     // If login is successful, redirect to home page
-    router.push("/home");
+    router.push("/validate");
     onSubmit={handleLogin}
   };
   
@@ -32,7 +32,24 @@ const LoginPage = () => {
       <main className={styles.main}>
        
           <div className={styles.center}>
+            <div classname={styles.card}>
+              <span>New User Sign-up</span>
+              <span>Existing Users Login</span>
+            </div>
                 <form >
+                <div classname={styles.card}>
+                  <select>
+                    <option>Agra</option>
+                    <option>Amristsar</option>
+                    <option>Agarthala</option>
+                    <option>Azamgarh</option>
+                    <option>Bangarpeth</option>
+                    <option>Bengaluru</option>
+                    <option>Bethul</option>
+                    <option>Betia</option>
+                  </select>
+                </div>
+                
                 <label>
                 Username:
                 <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
